@@ -61,6 +61,7 @@
         </div>
     </header>
 
+<!-- 資料夾 -->
     <div class="artist">
         <div class="folderWrapTitle">
             <h2>藝術家</h2>
@@ -73,7 +74,7 @@
                         <input type="checkbox"/>
                         <span></span>
                     </label>
-                    <a href="products_skullpanda.html">
+                    <a href="#one">
                         <p>SKULLPANDA</p>
                     </a>
                 </div>
@@ -91,7 +92,7 @@
                         <input type="checkbox"/>
                         <span></span>
                     </label>
-                    <a href="">
+                    <a href="#two">
                         <p>DOGDOGBENGPENG</p>
                     </a>
                 </div>
@@ -117,9 +118,33 @@
         </div>
     </div>
 
+<!-- 藝術家1 -->
+    <section class="skullpanda">
+        <div class="windows">
+            <div class="windowsTitle" id="one">
+                    <p>SKULLPANDA</p>
+            </div>
+            <div class="skullpandaWrap">
+                <div class="comparison" style="--slide: 500">
+                    <input type="range" min="1" max="1000" value="500" class="slider style="background-color:#fff;" oninput="this.parentNode.style.setProperty('--slide', `${this.value}`)">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        
-        
+<!-- 藝術家2 -->
+    <section class="dogdog">
+        <div class="windows">
+            <div class="windowsTitle" id="two">
+                <p>DOGDOGBENGPENG</p>
+            </div>
+            <div class="dogdogWrap">
+                <div class="comparison" style="--slide: 500">
+                    <input type="range" min="1" max="1000" value="500" class="slider style="background-color:#fff;" oninput="this.parentNode.style.setProperty('--slide', `${this.value}`)">
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- 頁尾 -->
     <footer>
