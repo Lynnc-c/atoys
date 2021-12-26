@@ -1,0 +1,464 @@
+.products{
+    padding:50px 0 200px 0;
+    position: relative;
+}
+.prodyctsTitle{
+    margin-left: 65%;
+    width: 250px;
+    height: 80px;
+    background: linear-gradient(#f8b74f 50%, #9a031e 50%);
+    background-size:100% 120px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    border-radius: 50% 50% 0 0 ;
+    padding-top: 50px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #aaa;
+    font-weight: 600;
+}
+.prodyctsTitle img{
+    width: 80px;
+}
+.prodyctsTitle h2{
+    color: #fff;
+}
+.productsWrap{
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: linear-gradient(#f8b74f 50%, #9a031e 50%);
+    background-size:100% 150px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 10px #aaa;
+    top: -1px;
+}
+.productsWrap::before{
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -40px;
+    right: 40px;
+    z-index: -1;
+        box-shadow: 0 0 10px #aaa;
+}
+.productsWrap::after{
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    z-index: -1;
+        box-shadow: 0 0 10px #aaa;
+}
+.productsWrapIn{
+    width: 950px;
+    height: 950px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #9a031e;
+    position: relative;
+    top: 23px;
+    left: 23px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    box-shadow: 0 0 10px rgb(80, 0, 15) inset;
+}
+/* 販賣機商品區 */
+.productsWrapItemL{
+    width: 550px;
+    height: 920px;
+    border: 1px solid #000;
+    background-color: #777;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.productsWrapItemLSpecial{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    box-sizing: border-box;
+    padding: 30px;
+    height: 230px;
+    background-color: #777;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) inset;
+}
+.productsName{
+    background-color: #f8b74f;
+    color: #fff;
+    z-index: 2;
+    padding: 5px 15px 5px 15px;
+    border-radius: 555px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 60%;
+    bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+.productsWrapItemLSpecial p:nth-of-type(3){
+    background-color: #9a031e;
+    left:63%;
+}
+.productsWrapItemLNormal p:nth-of-type(1){
+    left: 8.5%;
+}
+.productsWrapItemLNormal p:nth-of-type(2){
+    left: 32%;
+}
+.productsWrapItemLNormal p:nth-of-type(3){
+    left: 53%;
+}
+.productsWrapItemLNormal p:nth-of-type(4){
+    left: 74%;
+}
+.productsWrapItemLSpecial .tabPrice{
+    background-color: #fff;
+    color: #000;
+    opacity: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #333;
+    z-index: 0;
+    text-align: right;
+    line-height:1.7em;
+}
+.tabPrice span{
+    font-size: 30px;
+    color: #ff006e;
+    font-weight: 900;
+}
+.productsWrapItemLSpecial .tab{
+    background-color: #9a031e;
+    color: #fff;
+    opacity: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #333;
+    z-index: 0;
+}
+.productsWrapItemLSpecial::after{
+    content: '';
+    display: block;
+    height: 20px;
+    width: 528px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #666;
+    position: absolute;
+    left: 9px;
+    bottom: 12px;
+}
+.productsWrapItemLSpecial::before{
+    content: '';
+    display: block;
+    background: 
+    radial-gradient(10px circle at 15px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 115px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 115px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 215px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 215px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 315px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 315px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 415px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 415px 15px, #000 50%, transparent 55%);
+    width: 450px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    bottom: 8px;
+}
+.productsWrapItemLNormal{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    box-sizing: border-box;
+    padding: 30px;
+    height: 229px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) inset;
+}
+.productsWrapItemLNormal:nth-child(even){
+    background-color: #666;
+}
+.productsWrapItemLNormal p{
+    z-index: 1;
+}
+.productsWrapItemL img{
+    width: 20%;
+    cursor: pointer;
+}
+.productsWrapItemLSpecial img{
+    width: 20%;
+    cursor: pointer;
+}
+.productsWrapItemLNormal::after{
+    content: '';
+    display: block;
+    height: 20px;
+    width: 528px;
+    border: 1px solid #000;
+    background-color: #666;
+    border-radius: 10px;
+    position: absolute;
+    left: 9px;
+    bottom: 12px;
+}
+.productsWrapItemLNormal::before{
+    content: '';
+    display: block;
+    background: 
+    radial-gradient(10px circle at 15px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 115px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 115px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 215px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 215px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 315px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 315px 15px, #000 50%, transparent 55%),
+    radial-gradient(10px circle at 415px 15px, #555 50%, transparent 60%),
+    radial-gradient(12px circle at 415px 15px, #000 50%, transparent 55%);
+    width: 450px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    bottom: 8px;
+}
+/* 商品展示區 */
+.productsWrapItemR{
+    width: 355px;
+    height: 920px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.productsWrapItemRPic{
+    height: 450px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.productsWrapItemRButton{
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.productsWrapItemRButton i{
+    font-size: 30px;
+}
+.back{
+    margin-top: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: #4361ee;
+    color: #fff;
+    border: none;
+    border-radius: 300px;
+    box-shadow: 3px 3px 0px #718bff inset,
+                0px 3px 0px #1b35a5,
+                0px 6px 0px #1b35a5,
+                0px 9px 0px #1b35a5,
+                0px 12px 1px rgb(43, 43, 43);
+    position: relative;
+    top:-6px;
+    transition: .2s;
+}
+.back:hover{
+    top:0px;
+    box-shadow: 3px 3px 0px #718bff  inset,
+                0px 0px 0px #1b35a5,
+                0px 0px 0px #1b35a5,
+                0px 3px 0px #1b35a5,
+                0px 6px 1px rgb(43, 43, 43);
+}
+.all{
+    margin-top: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: #8338ec;
+    color: #fff;
+    border: none;
+    border-radius: 300px;
+    box-shadow: 3px 3px 0px #b078ff inset,
+                0px 3px 0px #5013a5,
+                0px 6px 0px #5013a5,
+                0px 9px 0px #5013a5,
+                0px 12px 1px rgb(43, 43, 43);
+    position: relative;
+    top:-6px;
+    transition: .2s;
+}
+.all:hover{
+    top:0px;
+    box-shadow: 3px 3px 0px #b078ff inset,
+                0px 0px 0px #5013a5,
+                0px 0px 0px #5013a5,
+                0px 3px 0px #5013a5,
+                0px 6px 1px rgb(43, 43, 43);
+}
+.shoppingCart{
+    height: 80px;
+    width: 150px;
+    margin-top: 10px;
+    background-color: #ff006e;
+    color: #fff;
+    border: none;
+    border-radius: 300px;
+    box-shadow: 3px 3px 0px rgb(245, 155, 185) inset,
+                0px 3px 0px #b1004d,
+                0px 6px 0px #b1004d,
+                0px 9px 0px #b1004d,
+                0px 12px 1px rgb(43, 43, 43);
+    position: relative;
+    top:-6px;
+    transition: .2s;
+}
+.shoppingCart:hover{
+    top:0px;
+    box-shadow: 3px 3px 0px rgb(245, 155, 185) inset,
+                0px 0px 0px #b1004d,
+                0px 0px 0px #b1004d,
+                0px 3px 0px #b1004d,
+                0px 6px 1px rgb(43, 43, 43);
+}
+.productsWrapItemRPic{
+    background-color: #31abc6;
+    overflow: hidden;
+}
+.productsWrapItemRPic img{
+    height: 100%;
+    padding-left: 30px;
+}
+.cat01{
+    width: 220px;
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+}
+.cat02{
+    width: 250px;
+    position: absolute;
+    left: 20%;
+    top: 2.5%;
+    z-index: -1;
+}
+/* 結帳區 */
+.productsWrapItemRShoppingCart{
+    height: 320px;
+}
+table{
+    display: none;
+    width: 355.3px;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.showup{
+    display: inline-block;
+    animation: wrapper-gradient .5s linear  ;
+}
+
+@keyframes wrapper-gradient {
+    0% {
+        transform: translateY(-15%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-size:14px;
+overflow:hidden;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-size:14px;
+font-weight:normal;overflow:hidden;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:center;vertical-align:top}
+
+.productsWrapItemRShoppingCart th{
+    height: 50px;
+    font-size: 14px;
+    width: 118.3333px;
+    line-height: 4em;
+    text-align:center;
+    font-weight: 600;
+}
+td{
+    line-height: 1.5em;
+    height: 60.3px;
+    padding-top: 10.3px;
+    box-sizing: border-box;
+}
+#cut{
+    border-radius: 555px;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    line-height: 1em;
+    background-color: #fff;
+}
+#add{
+    border-radius: 555px;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    line-height: 1.9em;
+    background-color: #fff;
+}
+#num{
+    width: 50px;
+    line-height: 2em;
+}
+#clear{
+    border-radius: 555px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #000;
+    background-color: #31abc6;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+#check{
+    border-radius: 555px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #000;
+    background-color: #ff006e;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+.bg img{
+    width: 100%;
+}
+body{
+    background-color: #000;
+}
+
+/* 音樂 */
+.music{
+    position: relative;
+    left: 63%;
+    padding-top: 70px;
+}

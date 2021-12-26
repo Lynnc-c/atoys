@@ -1,0 +1,353 @@
+/* ----------24H盲盒販賣機---------- */
+.store{
+    margin: auto;
+    padding: 150px 0 0 0;
+    width: 100%;
+    background-image: url(../img/store/storeBG.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.storeTitle{
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.storeTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #ff006e;
+    padding-top:15px;
+}
+.storeBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:1200px;
+    margin: auto;
+    padding-bottom: 120px;
+}
+.storeMap img{
+    width: 500px;
+}
+.storeMap{
+    position: relative;
+}
+.cat{
+    position: absolute;
+    left:80%;
+    bottom: 10%;
+}
+.storeMap img:nth-child(2){
+    width:150px;
+}
+.storeWrap{
+    border-radius: 15px 15px 10px 10px;
+    position: relative;
+}
+.storeWrapTitle{
+    height: 30px;
+    border: 1px solid #000;
+    position:relative;
+    top: 0px;
+    left: -1px;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+.storeWrapTitle:before {
+    content: '';
+    display: inline-block;
+    background: radial-gradient(10px circle at 15px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 40px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 40px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 65px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 65px 15px, #000 50%, transparent 55%);
+    width: 73px;
+    height: 30px;
+}
+.storeWrapTitle p{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    font-size: 14px;
+    letter-spacing:0.2em;
+    color: rgba(0, 0, 0, 0.30);
+}
+/* 輪播圖 */
+.storeWrapContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #000;
+    width: 500px;
+    top: -2px;
+    left: -1px;
+    border-radius:0 0 10px 10px;
+    box-sizing: border-box;
+}
+ul.slides{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    list-style: none;
+    overflow: hidden;
+    border-radius:0 0 10px 10px;
+}
+li.slide{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s transform ease-in-out;
+}
+.slide:nth-of-type(1){
+    background-size: 117%;
+    background-image: url(../img/store/store01.jpg);
+    background-repeat: no-repeat;
+    background-position: -80px -20px;
+}
+.slide:nth-of-type(2){
+    background-image: url(../img/store/store02.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -20px -50px;
+    left: 100%;
+}
+.slide:nth-of-type(3){
+    left: 200%;
+    background-image: url(../img/store/store05.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -20px 0px;
+}
+/* 輪播圖選取器 */
+input[type="radio"]{
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+/* 選取到的勾選器，變成灰色點點 */
+.controls-visible{
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    display: flex;
+    flex-direction:column;
+    bottom: 12px;
+    text-align: center;
+}
+.controls-visible::after{
+    content: '';
+    display: block;
+    width: 3px;
+    height: 220px;
+    background-color: #fff;
+    position: absolute;
+    top: -25px;
+    left: 26px;
+}
+.controls-visible label{
+    z-index: 2;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 10px;
+    border: 1px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1){
+    background-color: #f6be61;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #fff;
+    outline: 1px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2){
+    background-color: #ff006e;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #fff;
+    outline: 1px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3){
+    background-color: #8338ec;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #fff;
+    outline: 1px solid #fff;
+}
+/* 選取器勾選，決定頁面移度距離，切頁(已橫向排列) */
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide{
+    transform: translate(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide{
+    transform: translate(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide{
+    transform: translate(-200%);
+}
+/* 左右按鈕 */
+.navigator {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 100%;
+    z-index: 3;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
+}
+.navigator i {
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.250);
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
+    display: flex;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
+    display: flex;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
+    display: flex;
+}
+
+/* ----------盲盒玩法---------- */
+.blindBox{
+    margin: auto;
+}
+.blindBoxTitle{
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+}
+.blindBoxTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #f6bd60;
+    padding-top:10px;
+}
+.blindBoxWrapItem{
+    width: 230px;
+    position: relative;
+}
+.blindBoxWrapItemPic{
+    width:100%;
+}
+.blindBoxWrapItemArrow{
+    width: 70px;
+    position: absolute;
+    top: 140px;
+    right: -50px;
+    z-index: 2;
+}
+.blindBox{
+    width: 1000px;
+}
+.blindBoxWrap{
+    margin: 30px 0;
+    display: flex;
+    align-content:center;
+    justify-content: space-around;
+}
+
+/* ----------販賣機操作---------- */
+.vendingMachineTitle{
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    margin: 100px 0 40px 0;
+}
+.vendingMachineTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #8338ec;
+    padding-top:10px;
+}
+.vendingMachineWrapTitle{
+    height: 30px;
+    border: 1px solid #000;
+    position:relative;
+    top: 0px;
+    left: -1px;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+.vendingMachineWrapTitle:before {
+    content: '';
+    display: inline-block;
+    background: radial-gradient(10px circle at 15px 15px, #8338ec 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 40px 15px, #8338ec 50%, transparent 60%),radial-gradient(12px circle at 40px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 65px 15px, #8338ec 50%, transparent 60%),radial-gradient(12px circle at 65px 15px, #000 50%, transparent 55%);
+    width: 73px;
+    height: 30px;
+}
+.vendingMachineWrapTitle p{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    font-size: 14px;
+    letter-spacing:0.2em;
+    color: rgba(0, 0, 0, 0.30);
+}
+.vendingMachineWrapPictre{
+    padding-top: 15px;
+    width: 500px;
+}
+.vendingMachineWrapPictre img{
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    vertical-align: top;
+}
+.vendingMachineContent{
+    width: 498px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 200px;
+}
+.vendingMachineContentCat{
+    position: absolute;
+    left: -20px;
+    bottom: -70px;
+}
+.vendingMachineContent img:nth-child(2){
+    width: 200px;
+}
+.vendingMachineWrapStep{
+    width: 380px;
+}
+.vendingMachineWrapStep img{
+    width: 100%;
+}
+.vendingMachineWrap{
+    width: 1000px;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content:space-around;
+}

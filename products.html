@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atoys_products</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style/cssReset.css">
+    <link rel="stylesheet" href="style/allStyle.css">
+    <link rel="stylesheet" href="style/productsStyle.css">
+    <!-- 字體link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Icon link -->
+    <link rel=”icon” href=”favicon.ico” type=”image/x-icon”>
+    <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6d81c151d2.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+<!-- 頁首 -->
+    <header>
+        <div class="headerLogo">
+            <a href="index.html" target="_self"><img src="img/all/logo.png" alt="aToys Logo"></a>
+            <a href="index.html"><h1 class="headerLogoTxt">atoys</h1></a>
+        </div>
+        <div class="headerNav">
+            <a href="products_harrypotter.html">主題商品</a>
+            <a href="products.html" style="color: #ff006e;">系列商品</a>
+            <a href="artist.html">藝術家</a>
+            <a href="about.html">關於我們</a>
+            <a href="store.html">服務據點</a>
+            <a href="#">最新消息</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <input type="checkbox" id="toggler">
+        <label for="toggler">
+            <div class="headerList">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <div class="hamburger">
+            <div class="hamburgerOl">
+                <ol>
+                    <li class=""><a href="index.html">回到首頁</a></li>
+                    <li class=""><a href="products_harrypotter.html">主題商品</a></li>
+                    <li class=""><a href="artist.html">藝術家</a></li>
+                    <li class=""><a href="about.html">關於我們</a></li>
+                    <li class=""><a href="store.html">服務據點</a></li>
+                    <li class=""><a href="#">最新消息</a></li>
+                </ol>
+            </div>
+        </div>
+    </header>
+
+<!-- 系列切換 -->
+<div class="switchWrap">
+    <div class="switchWrapTitle">
+        <h2>系列商品</h2>
+    </div>
+    <div class="general-container">
+        <input class="radio" type="radio" name="card" id="card-1" checked />
+            <label class="content" for="card-1">
+        <span class="icon">
+            <i class="fas fa-bolt"></i>
+        </span>
+        <h3 class="card-title">
+            <a href="products_harrypotter.html">哈利波特系列盲盒</a>
+            <a href="products_harrypotter.html"><span class="subtitle">@POPMART</span></a>
+        </h3>
+        </label>
+
+        <input class="radio" type="radio" name="card" id="card-2" />
+        <label class="content" for="card-2">
+        <span class="icon">
+            <i class="fas fa-headphones"></i>
+        </span>
+        <h3 class="card-title">
+            <a href="products_skullpanda.html">SKULLPANDA熊貓熱潮系列盲盒</a>
+            <a href="products_skullpanda.html"><span class="subtitle">@POPMART</span></a>
+        </h3>
+        </label>
+
+        <input class="radio" type="radio" name="card" id="card-3" />
+        <label class="content" for="card-3">
+        <span class="icon">
+            <i class="fas fa-skull-crossbones"></i>
+        </span>
+        <h3 class="card-title">
+            <a href="products_skullpanda.html">監獄兔獄中日記系列盲盒</a>
+            <a href="products_skullpanda.html"><span class="subtitle">@POPMART</span></a>
+        </h3>
+        </label>
+
+        <input class="radio" type="radio" name="card" id="card-4" />
+        <label class="content" for="card-4">
+        <span class="icon">
+            <i class="fas fa-bed"></i>
+        </span>
+        <h3 class="card-title">
+            <a href="products_skullpanda.html">SUMI瞌睡小羊系列盲盒</a>
+            <a href="products_skullpanda.html"><span class="subtitle">@京中潮居</span></a>
+        </h3>
+        </label>
+        
+        <input class="radio" type="radio" name="card" id="card-5" />
+        <label class="content" for="card-5">
+        <span class="icon">
+            <i class="fas fa-meh"></i>
+        </span>
+        <h3 class="card-title">
+            <a href="products_skullpanda.html">黏黏怪物研究所走走系列盲盒</a>
+            <a href="products_skullpanda.html"><span class="subtitle">@Sticky Monster Lab</span></a>
+        </h3>
+        </label>
+    </div>
+</div>
+
+<!-- 熱門商品 -->
+<section class="bestsellerBG">                  
+    <div class="bestsellerTitle">
+            <h2>熱門商品</h2>
+    </div>
+    <div class="bestseller">
+        <a href="#" class="hvr-hang">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>康文國際</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">史迪奇大公仔</p>
+                    <p  class="bestsellerPrice">NT$ 4,980</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-wobble-horizontal">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>幸會潮玩</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">Starfy200%限量-惡魔Starfy</p>
+                    <p  class="bestsellerPrice">NT$ 3,580</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                </div>
+            </div>
+        </a>
+        <a href="products_skullpanda.html" class="hvr-bob">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>泡泡瑪特</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">熊貓熱潮系列盲盒</p>
+                    <p  class="bestsellerPrice">NT$ 380</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-wobble-horizontal">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>幸會潮玩</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">豆子限量公仔-小陽光</p>
+                    <p  class="bestsellerPrice">NT$ 3,080</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-wobble-horizontal">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>狗狗夾星</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">富士山雷龍限定版-小蜜蜂</p>
+                    <p  class="bestsellerPrice">NT$ 1,921</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-hang">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>泡泡瑪特</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">LABUBU海綿寶寶系列公仔</p>
+                    <p  class="bestsellerPrice">NT$ 3,960</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-hang">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>玩老玩具</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">The Ghost Cat-貓幽靈BEN</p>
+                    <p  class="bestsellerPrice">NT$ 1,290</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-bob">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>研達YENDAR</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">Animal Life 柯基的日常</p>
+                    <p  class="bestsellerPrice">NT$ 400</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="hvr-bob">
+            <div class="bestsellerWrap">
+                <div class="bestsellerWrapTitle">
+                    <p>泡泡瑪特</p>
+                </div>
+                <div class="bestsellerWrapContent">
+                    <p class="bestsellerName">VITA超級樂隊系列公仔</p>
+                    <p  class="bestsellerPrice">NT$ 3,360</p>
+                    <img src="img/index/popularProductsButton.png" alt="button">
+                    <p class="hotTag">熱</p>
+                    <p class="freeShippingTag">免運</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</select>
+
+<!-- 頁尾 -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <a href="index.html"><img src="img/all/logo.png" alt="atoys" class="logo"></a>
+                <p>Reference website /<br><a href="https://www2.mejiro.ac.jp/univ/mejinavi2021/">Mejinavi2021</a>&emsp;<a href="https://toyzeroplus.com/">Toyzero</a>&emsp;<a href="https://www.jollybuy.com/index.html">Jollybuy</a>&emsp;<a href="https://www.pinkoi.com/?utm_source=Google-TW-MKT&utm_medium=p-con-search-na&utm_campaign=brand&gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9IdRmqbUYbNuo2zk8-UiNrcw7NHZxfZBet8gHPYg27x8cZnPrAqklMaAtfQEALw_wcB">Pinkoi</a></p>
+                <br>
+                <p>Illustration by <a href="https://icons8.com/illustrations/author/6023f2cd123f99000e63cdd1">Anna Antipina</a> from <a href="https://icons8.com/illustrations">Ouch!</a></p>
+            </div>
+            <div class="col">
+                <h3>聯絡我們<div class="underline"><span></span></div></h3>
+                <p>320</p>
+                <p>桃園市中壢區復興路46號9樓</p>
+                <p></p>
+                <p class="emailID">sarah_jh_shen@wiedu.com</p>
+                <h4>(02)7707-4972</h4>
+            </div>
+            <div class="col">
+                <h3>關於我們<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="products_harrypotter.html">主題商品</a></li>
+                    <li><a href="products.html" style="color: #ff006e;">系列商品</a></li>
+                    <li><a href="artist.html">藝術家</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="store.html">服務據點</a></li>
+                    <li><a href="#">最新消息</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>優惠資訊<div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="填入信箱，獲得更多優惠消息。" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="socialIcon">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-youtube-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyRight">© 2020 Powered by SOME.ALL Right Reserved.<br>本網站為緯育TibaMe前端設計工程師班第73期學員專題作品，本平台僅供學習、展示之用。<br>若有侵權疑慮，您可以私訊<a href="https://www.tibame.com/goodjob/frontend">[TibaMe-前端設計工程師養成班]</a>，後續會由專人協助處理。</p>
+    </footer>
+
+</body>
+</html>

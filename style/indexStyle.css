@@ -1,0 +1,515 @@
+
+/* ----------主視覺banner---------- */
+.banner{
+    display: flex;
+}
+.banner img:nth-child(1){
+    width: 100%;
+}
+/* ----------盲盒玩法---------- */
+.blindBox{
+    margin: auto;
+    background-image: url(../img/index/wavyLine01.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position:top 20% right 5%;
+}
+.blindBoxTitle{
+    display: inline-block;
+    width: 100%;
+    height: 270px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    background-image: url(../img/index/cat01.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position:top 60% right 50%;
+}
+.blindBoxTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #f6bd60;
+    padding-top:10px;
+    margin-top: 185px;
+}
+.blindBoxWrapItem{
+    width: 230px;
+    position: relative;
+}
+.blindBoxWrapItemPic{
+    width:100%;
+}
+.blindBoxWrapItemArrow{
+    width: 70px;
+    position: absolute;
+    top: 140px;
+    right: -50px;
+    z-index: 2;
+}
+.blindBox{
+    width: 1000px;
+}
+.blindBoxWrap{
+    margin: 30px 0;
+    display: flex;
+    align-content:center;
+    justify-content: space-around;
+}
+
+/* ----------主題商品---------- */
+.harryPotter{
+    margin: auto;
+    padding: 150px 0;
+    width: 100%;
+    background-image: url(../img/index/cloudBG01.png),url(../img/index/wavyLine01.png);
+    background-repeat: no-repeat;
+    background-size: 370px,200px;
+    background-position:top 150px right -5%,left 0%;
+}
+.harryPotterTitle{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.harryPotterTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #4361ee;
+    padding-top:15px;
+}
+.harryPotterWrap{
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    border-radius: 15px 15px 10px 10px;
+    position: relative;
+    margin-bottom: 200px;
+}
+.harryPotterWrapTitle{
+    width: 1000px;
+    height: 30px;
+    border: 1px solid #000;
+    position:relative;
+    top: -1px;
+    left: -1px;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+.harryPotterWrapTitle:before {
+    content: '';
+    display: inline-block;
+    background: radial-gradient(10px circle at 15px 15px, #abd9e8 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 40px 15px, #abd9e8 50%, transparent 60%),radial-gradient(12px circle at 40px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 65px 15px, #abd9e8 50%, transparent 60%),radial-gradient(12px circle at 65px 15px, #000 50%, transparent 55%);
+    width: 73px;
+    height: 30px;
+}
+.harryPotterWrapTitle p{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.30);
+    letter-spacing:0.1em;
+}
+.harryPotterCat{
+    position: absolute;
+    width: 300px;
+    right: 130px;
+    top: 370px;
+}
+/* 哈利波特輪播圖 */
+.harryPotterWrapContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #000;
+    width: 1000px;
+    top: -2px;
+    left: -1px;
+    border-radius:0 0 10px 10px;
+}
+ul.slides{
+    position: relative;
+    width: 100%;
+    height: 568px;
+    list-style: none;
+    overflow: hidden;
+    border-radius:0 0 10px 10px;
+}
+li.slide{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s transform ease-in-out;
+}
+.slide:nth-of-type(1){
+    background-color: #f5cac3;
+    background-image: url(../img/index/harryPotter01.gif);
+    background-size: 100%;
+}
+.slide:nth-of-type(2){
+    background-color: #abd9e8;
+    left: 100%;
+}
+.slide:nth-of-type(3){
+    background-color: #b3dbc0;
+    left: 200%;
+}
+/* 輪播圖選取器 */
+input[type="radio"]{
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+/* 選取到的勾選器，變成灰色點點 */
+.controls-visible{
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+.controls-visible label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1){
+    background-color: #aaa;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2){
+    background-color: #aaa;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3){
+    background-color: #aaa;
+}
+/* 選取器勾選，決定頁面移度距離，切頁(已橫向排列) */
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide{
+    transform: translate(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide{
+    transform: translate(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide{
+    transform: translate(-200%);
+}
+/* 左右按鈕 */
+.navigator {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 100%;
+    z-index: 3;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
+}
+.navigator i {
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.250);
+    cursor: pointer;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
+    display: flex;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
+    display: flex;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
+    display: flex;
+}
+
+/* ----------熱門商品---------- */
+.bestsellerBG{
+    margin: auto;
+    background-image: url(../img/index/popularProductsBG.png);
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    background-position: top 200px;
+    height: 2000px;
+    width: 100%;
+}
+.bestseller{
+    width: 1000px;
+    height: 970px;
+    margin: auto;
+    margin-top: -150px;
+    background-image: url(../img/index/popularProductsBG02.png);
+    background-size: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+}
+.bestsellerTitle{
+    display: inline-block;
+    width: 100%;
+    height: 270px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    padding-top: 280px;
+    background-image: url(../img/index/cat03.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position:top 20% right 50%;
+}
+.bestsellerTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #ff006e;
+    padding-top:15px;   
+}
+.bestsellerWrap{
+    width: 261px;
+    height: 271px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 0 #31abc673;
+}
+.bestseller a{
+    text-decoration: none;
+}
+.bestsellerName{
+    background-color: #fff;
+    display: block;
+    width: fit-content;
+    padding:10px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 150px;
+    left: 10px;
+    color: #000;
+}
+.bestsellerPrice{
+    background-color: #fff;
+    display: block;
+    width: fit-content;
+    padding:5px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    top: 150px;
+    left: 120px;
+    color: #ff006e;
+}
+.hotTag{
+    padding: 10px;
+    background-color: #e56e7a;
+    color: #fff;
+    width: fit-content;
+    border:1px solid #000;
+    border-radius: 0 10px 0 10px;
+    position: relative;
+    top: -100px;
+    left: -10px;
+    font-size: 16px;
+}
+.freeShippingTag{
+    padding: 10px;
+    background-color: #4361ee;
+    color: #fff;
+    width: fit-content;
+    border:1px solid #000;
+    border-radius: 0 10px 0 10px;
+    position: relative;
+    top: -95px;
+    left: -10px;
+    font-size: 16px;
+}
+.bestsellerWrapTitle {
+    width: 260px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 10px 10px 0 0 ;
+    background-color: #fff;
+}
+.bestsellerWrapTitle:before {
+    content: '';
+    display: block;
+    background: radial-gradient(10px circle at 15px 15px, #f5cac3 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #f5cac3 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #f5cac3 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+    height: 30px;
+}
+.bestsellerWrapTitle p{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -23px;
+    left: 5px;
+    font-size: 16px;
+    letter-spacing: 0.1em;;
+    color: #000;
+}
+.bestsellerWrapContent{
+    width: 260px;
+    height: 240px;
+    border: 1px solid #000;
+    border-radius: 0 0 10px 10px;
+    background-color: #f5cac3;
+    position: relative;
+    top: -1px;
+    background-image: url(../img/index/bestseller01.png);
+    background-size: 100%;
+    background-position:20px -40px;
+    background-repeat: no-repeat;
+}
+.bestsellerWrapContent img{
+    width: 40px;
+    position: relative;
+    top: 130px;
+    left: 105px;
+}
+.bestseller a:nth-child(5n-4) .bestsellerWrapTitle:before{
+    background: radial-gradient(10px circle at 15px 15px, #b3dbc0 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #b3dbc0 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #b3dbc0 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+}
+.bestseller a:nth-child(5n-4) .bestsellerWrapContent{
+    background-color: #b3dbc0;
+    background-image: url(../img/index/bestseller04.png);
+    background-size: 140%;
+    background-position:-50px -70px;
+}
+.bestseller a:nth-child(5n-3) .bestsellerWrapTitle:before{
+    background: radial-gradient(10px circle at 15px 15px, #bb9fcc 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #bb9fcc 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #bb9fcc 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+}
+.bestseller a:nth-child(5n-3) .bestsellerWrapContent{
+    background-color: #bb9fcc;
+    background-image: url(../img/index/bestseller03.png);
+    background-size: 150%;
+    background-position:-50px -60px;
+}
+.bestseller a:nth-child(6n-2) .bestsellerWrapTitle:before{
+    background: radial-gradient(10px circle at 15px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #f6be61 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+}
+.bestseller a:nth-child(6n-2) .bestsellerWrapContent{
+    background-color: #f6be61;
+    background-image: url(../img/index/bestseller01.png);
+    background-size: 100%;
+    background-position:20px -40px;
+}
+.bestseller a:nth-child(5) .bestsellerWrapContent{
+    background-image: url(../img/index/bestseller05.png);
+    background-size: 190%;
+    background-position:-150px -50px;
+}
+.bestseller a:nth-child(6) .bestsellerWrapContent{
+    background-image: url(../img/index/bestseller06.png);
+    background-size: 150%;
+    background-position:-60px -70px;
+}
+.bestseller a:nth-child(6) .bestsellerWrapContent{
+    background-image: url(../img/index/bestseller07.png);
+    background-size: 130%;
+    background-position:-30px -50px;
+}
+.bestseller a:nth-child(8) .bestsellerWrapTitle:before{
+    background: radial-gradient(10px circle at 15px 15px, #f7ede3 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #f7ede3 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #f7ede3 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+}
+.bestseller a:nth-child(4) .bestsellerWrapContent{
+    background-color: #f6be61;
+    background-image: url(../img/index/bestseller08.png);
+    background-size: 180%;
+    background-position:-90px -90px;
+}
+.bestseller a:nth-child(7) .bestsellerWrapContent{
+    background-image: url(../img/index/bestseller09.png);
+    background-size: 120%;
+    background-position:-50px -40px;
+}
+.bestseller a:nth-child(8) .bestsellerWrapContent{
+    background-color: #f7ede3;
+    background-image: url(../img/index/bestseller10.png);
+    background-size: 150%;
+    background-position:-60px -70px;
+}
+.bestseller a:nth-child(9) .bestsellerWrapContent{
+    background-image: url(../img/index/bestseller12.png);
+    background-size: 130%;
+    background-position:-30px -60px;
+}
+
+/* 合作品牌 */
+.artistTitle{
+    display: inline-block;
+    width: 100%;
+    height: 360px;
+    font-size: 35px;
+    font-weight:600;
+    text-align: center;
+    background-image: url(../img/index/cat04.png);
+    background-repeat: no-repeat;
+    background-size: 290px;
+    background-position:top 50% right 50%;
+    margin-top: 100px;
+}
+.artistTitle h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #8338ec;
+    padding-top:15px;
+    margin-top: 250px;
+}
+.artistWrap{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 900px;
+}
+.artistItem{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ccc;
+    margin-bottom: 100px;
+    border-radius: 5px;
+}
+.artistItem img{
+    width: 100%;
+    vertical-align:baseline;
+}
+.artistName{
+    margin: auto;
+    text-align: center;
+    background-color: #f6be61;
+    display: block;
+    width: fit-content;
+    padding: 0 10px;
+    line-height: 2em;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 12px;
+    box-shadow: 1px 1px 0 #d18100;
+}
+.artist{
+    margin: 50px;
+}
+.socialIcon i:hover{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.30);
+}

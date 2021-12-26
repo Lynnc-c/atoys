@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atoys</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style/cssReset.css">
+    <link rel="stylesheet" href="style/indexStyle.css">
+    <link rel="stylesheet" href="style/allStyle.css">
+    <!-- 字體link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Icon link -->
+    <link rel=”icon” href=”favicon.ico” type=”image/x-icon”>
+    <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6d81c151d2.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+</head>
+<body>
+
+<!-- 頁首 -->
+    <header>
+        <div class="headerLogo">
+            <a href="index.html" target="_self"><img src="img/all/logo.png" alt="aToys Logo"></a>
+            <a href="index.html"><h1 class="headerLogoTxt">atoys</h1></a>
+        </div>
+        <div class="headerNav">
+            <a href="products_harrypotter.html">主題商品</a>
+            <a href="products.html">系列商品</a>
+            <a href="artist.html">藝術家</a>
+            <a href="about.html">關於我們</a>
+            <a href="store.html">服務據點</a>
+            <a href="#">最新消息</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <input type="checkbox" id="toggler">
+        <label for="toggler">
+            <div class="headerList">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <div class="hamburger">
+            <div class="hamburgerOl">
+                <ol>
+                    <li class=""><a href="products_harrypotter.html">主題商品</a></li>
+                    <li class=""><a href="products.html">系列商品</a></li>
+                    <li class=""><a href="artist.html">藝術家</a></li>
+                    <li class=""><a href="about.html">關於我們</a></li>
+                    <li class=""><a href="store.html">服務據點</a></li>
+                    <li class=""><a href="#">最新消息</a></li>
+                </ol>
+            </div>
+        </div>
+    </header>
+
+<!-- banner -->
+    <section class="banner">
+        <img src="img/index/banner.gif" alt="Banner Background">
+    </section>
+
+<!-- 盲盒玩法 -->
+    <section class="blindBox">
+        <div class="blindBoxTitle">
+            <h2>盲盒玩法</h2>
+        </div>
+        <div class="blindBoxWrap">
+            <div class="blindBoxWrapItem">
+                <img src="img/index/blindBoxArrow.png" alt="arrow" class="blindBoxWrapItemArrow">
+                <img src="img/index/blindBox01.png" alt="How to play blind box." class="blindBoxWrapItemPic">
+            </div>
+            <div class="blindBoxWrapItem">
+                <img src="img/index/blindBoxArrow.png" alt="arrow" class="blindBoxWrapItemArrow">
+                <img src="img/index/blindBox02.png" alt="How to play blind box." class="blindBoxWrapItemPic">
+            </div>
+            <div class="blindBoxWrapItem">
+                <img src="img/index/blindBoxArrow.png" alt="arrow" class="blindBoxWrapItemArrow">
+                <img src="img/index/blindBox03.png" alt="How to play blind box." class="blindBoxWrapItemPic">
+            </div>
+            <div class="blindBoxWrapItem">
+                <img src="img/index/blindBox04.png" alt="How to play blind box." class="blindBoxWrapItemPic">
+            </div>
+        </div>
+    </section>
+
+<!-- 主題商品 -->
+<section class="harryPotter">
+    <div class="harryPotterTitle">
+        <h2>主題商品</h2>
+    </div>
+    <div class="harryPotterWrap">
+        <div class="harryPotterWrapTitle">
+            <p>Harry Potter</p>
+        </div>
+        <div class="harryPotterWrapContent">
+            <!-- 哈利波特輪播圖 -->
+            <ul class="slides">
+                <!-- 輪播圖勾選器/隱藏 -->
+                <input type="radio" id="control01" name="control">
+                <input type="radio" id="control02" name="control">
+                <input type="radio" id="control03" name="control" checked>
+                <!--  左右按鈕  -->
+                <div class="navigator slide01">
+                    <label for="control03">
+                        <i class="fas fa-caret-left"></i>
+                    </label>
+                    <label for="control02">
+                        <i class="fas fa-caret-right"></i>
+                    </label>
+                </div>
+                <div class="navigator slide02">
+                    <label for="control01">
+                        <i class="fas fa-caret-left"></i>
+                    </label>
+                    <label for="control03">
+                        <i class="fas fa-caret-right"></i>
+                    </label>
+                </div>
+                <div class="navigator slide03">
+                    <label for="control02">
+                        <i class="fas fa-caret-left"></i>
+                    </label>
+                    <label for="control01">
+                        <i class="fas fa-caret-right"></i>
+                    </label>
+                </div>
+                <!-- 輪播圖頁面 -->
+                a<li class="slide"></li>
+                <li class="slide"><img src="img/index/harryPotter02.gif" alt="Harry Potter Product"></li>
+                <li class="slide"><img src="img/index/harryPotter03.gif" alt="Harry Potter Product"></li>
+                <!-- 輪播圖勾選器/自訂樣式 -->
+                <div class="controls-visible">
+                    <label for="control01"></label>
+                    <label for="control02"></label>
+                    <label for="control03"></label>
+                </div>
+            </ul>
+            <a href="products_harrypotter.html"><img src="img/index/cat02.png" alt="cat" class="harryPotterCat"></a>         
+        </div>
+    </div>
+</select>
+
+<!-- 熱門商品 -->
+    <section class="bestsellerBG">                  
+        <div class="bestsellerTitle">
+                <h2>熱門商品</h2>
+        </div>
+        <div class="bestseller">
+            <a href="#" class="hvr-hang">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>康文國際</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">史迪奇大公仔</p>
+                        <p  class="bestsellerPrice">NT$ 4,980</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-wobble-horizontal">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>幸會潮玩</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">Starfy200%限量-惡魔Starfy</p>
+                        <p  class="bestsellerPrice">NT$ 3,580</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-bob">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>泡泡瑪特</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">OOTD綾耀大公仔</p>
+                        <p  class="bestsellerPrice">NT$ 4,080</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-wobble-horizontal">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>幸會潮玩</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">豆子限量公仔-小陽光</p>
+                        <p  class="bestsellerPrice">NT$ 3,080</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-wobble-horizontal">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>狗狗夾星</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">富士山雷龍限定版-小蜜蜂</p>
+                        <p  class="bestsellerPrice">NT$ 1,921</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-hang">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>泡泡瑪特</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">LABUBU海綿寶寶系列公仔</p>
+                        <p  class="bestsellerPrice">NT$ 3,960</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-hang">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>玩老玩具</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">The Ghost Cat-貓幽靈BEN</p>
+                        <p  class="bestsellerPrice">NT$ 1,290</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-bob">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>研達YENDAR</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">Animal Life 柯基的日常</p>
+                        <p  class="bestsellerPrice">NT$ 400</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="hvr-bob">
+                <div class="bestsellerWrap">
+                    <div class="bestsellerWrapTitle">
+                        <p>泡泡瑪特</p>
+                    </div>
+                    <div class="bestsellerWrapContent">
+                        <p class="bestsellerName">VITA超級樂隊系列公仔</p>
+                        <p  class="bestsellerPrice">NT$ 3,360</p>
+                        <img src="img/index/popularProductsButton.png" alt="button">
+                        <p class="hotTag">熱</p>
+                        <p class="freeShippingTag">免運</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </select>
+
+<!-- 推薦品牌 -->
+    <section class="artist">
+        <div class="artistTitle">
+            <h2>推薦品牌</h2>
+        </div>
+        <div class="artistWrap">
+            <a href="#">
+                <div class="artistItem hvr-buzz-out">
+                    <img src="img/index/logo01.jpg" alt="artist logo">
+                    <div class="artistName">
+                        <p>PP BABY</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="artistItem hvr-buzz-out">
+                    <img src="img/index/logo02.jpg" alt="artist logo">
+                    <div class="artistName">
+                        <p>MOMOCO STUDIO</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="artistItem hvr-buzz-out">
+                    <img src="img/index/logo03.jpg" alt="artist logo">
+                    <div class="artistName">
+                        <p>DOGDOGBENGPENG</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="artistItem hvr-buzz-out">
+                    <img src="img/index/logo04.jpg" alt="artist logo">
+                    <div class="artistName">
+                        <p>POP MART</p>
+                    </div>
+                </div>
+            </a>
+                <a href="#">
+                <div class="artistItem hvr-buzz-out">
+                    <img src="img/index/logo05.jpg" alt="artist logo">
+                    <div class="artistName">
+                        <p>幸會潮玩</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<!-- 頁尾 -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <a href="index.html"><img src="img/all/logo.png" alt="atoys" class="logo"></a>
+                <p>Reference website /<br><a href="https://www2.mejiro.ac.jp/univ/mejinavi2021/">Mejinavi2021</a>&emsp;<a href="https://toyzeroplus.com/">Toyzero</a>&emsp;<a href="https://www.jollybuy.com/index.html">Jollybuy</a>&emsp;<a href="https://www.pinkoi.com/?utm_source=Google-TW-MKT&utm_medium=p-con-search-na&utm_campaign=brand&gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9IdRmqbUYbNuo2zk8-UiNrcw7NHZxfZBet8gHPYg27x8cZnPrAqklMaAtfQEALw_wcB">Pinkoi</a></p>
+                <br>
+                <p>Illustration by <a href="https://icons8.com/illustrations/author/6023f2cd123f99000e63cdd1">Anna Antipina</a> from <a href="https://icons8.com/illustrations">Ouch!</a></p>
+            </div>
+            <div class="col">
+                <h3>聯絡我們<div class="underline"><span></span></div></h3>
+                <p>320</p>
+                <p>桃園市中壢區復興路46號9樓</p>
+                <p></p>
+                <p class="emailID">sarah_jh_shen@wiedu.com</p>
+                <h4>(02)7707-4972</h4>
+            </div>
+            <div class="col">
+                <h3>關於我們<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="products_harrypotter.html">主題商品</a></li>
+                    <li><a href="products.html">系列商品</a></li>
+                    <li><a href="artist.html">藝術家</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="store.html">服務據點</a></li>
+                    <li><a href="#">最新消息</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>優惠資訊<div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="填入信箱，獲得更多優惠消息。" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="socialIcon">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-youtube-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyRight">© 2021 Powered by atoys Right Reserved.<br>本網站為緯育TibaMe前端設計工程師班第73期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊<a href="https://www.tibame.com/goodjob/frontend">[TibaMe-前端設計工程師養成班]</a>，後續會由專人協助處理。</p>
+    </footer>
+</body>
+</html>

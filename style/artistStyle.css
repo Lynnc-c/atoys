@@ -1,0 +1,140 @@
+/* 資料夾 */
+input {
+    opacity: 0;
+}
+label {
+    cursor: pointer;
+}
+.folderItem {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+.folder {
+    position: relative;
+    width: 100px;
+    height: calc(100px / 100 * 75);
+    perspective: 750px;
+}
+.folder span::before, .folder span::after, .folder::before, .folder::after {
+    position: absolute;
+    content: "";
+    border-radius: calc(100px / 100 * 5);
+}
+.folder::before {
+    width: 100%;
+    height: 92%;
+    bottom: 0;
+    background-color: #cca352;
+    border: 1px solid #000;
+}
+.folder span::after {
+    width: 90%;
+    height: 85%;
+    bottom: 0;
+    left: 5%;
+    background-color: #fff;
+    z-index: 2;
+    transition: transform 250ms ease 0ms;
+    transform: translate3d(0px, 0px, 0px);
+    border: 1px solid #000;
+}
+.folder span::before {
+    background-color: #fc6;
+    width: 100%;
+    height: 92%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    content: '';
+    transition: transform 500ms ease 0ms;
+    transform-origin: 0 100% 0;
+    outline: 1px solid transparent;
+   /* Firefox anti-aliasing hack */
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+.folder::after {
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    background-color: #cca352;
+    z-index: 1;
+    border: 1px solid #000;
+}
+.folder input:hover + span::before {
+    transform: rotateX(-35deg);
+}
+/* 其他 */
+.folderWrap{
+    padding-top: 20%;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content:space-around;
+    align-items:center;
+}
+.folderWrapTitle{
+    width: 100%;
+    padding: 150px 0 50px 0;
+}
+h2{
+    border: 1px solid #000;
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 #f6bd60;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 35px;
+    margin: auto;
+    font-weight:600;
+}
+.folderItem p{
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    line-height: 2em;
+}
+.folderItem a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+.artist{
+    margin: auto;
+}
+.windows{
+    margin: auto;
+    width: 900px;
+    height: 500px;
+    border: 1px solid #000;
+    background-image: url(../img/artist/BG.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.windowsTitle{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0 ;
+    position: relative;
+    top: -1px;
+    left: -1px;
+}
+.windowsTitle:before {
+    content: '';
+    display: block;
+    background: radial-gradient(10px circle at 15px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
+    height: 30px;
+}
