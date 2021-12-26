@@ -138,3 +138,11 @@ h2{
     background: radial-gradient(10px circle at 15px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 15px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 35px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 35px 15px, #000 50%, transparent 55%),radial-gradient(10px circle at 55px 15px, #31abc6 50%, transparent 60%),radial-gradient(12px circle at 55px 15px, #000 50%, transparent 55%);
     height: 30px;
 }
+body{
+    
+    background-image: url(../img/artist/BG-01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 8%;
+    
+}
