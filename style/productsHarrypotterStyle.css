@@ -349,7 +349,7 @@
     width: 220px;
     position: absolute;
     right: 20%;
-    bottom: 15%;
+    bottom: 7%;
 }
 .cat02{
     width: 250px;
@@ -448,17 +448,11 @@ td{
     top: 0;
     left: 0;
     z-index: -999;
+    box-sizing: border-box;
 }
 .bg img{
     width: 100%;
 }
 body{
     background-color: #000;
-}
-
-/* 音樂 */
-.music{
-    position: relative;
-    left: 63%;
-    padding-top: 70px;
 }
