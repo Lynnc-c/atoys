@@ -237,13 +237,13 @@ a{
     top: 0;
     left: 0;
     z-index: 99999;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 3px;
+    width: 14px;
     height: var(--height);
     background: #fff;
     cursor: ew-resize;
